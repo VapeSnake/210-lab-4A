@@ -12,6 +12,7 @@ struct Color {
 };
 
 int main() {
-    cout << "Hello world!" << endl;
+    Color color1 = {140, 200, 255};
+    cout << "Color 1 - Red: " << color1.red << ", Green: " << color1.green << ", Blue: " << color1.blue << endl;
     return 0;
 }
