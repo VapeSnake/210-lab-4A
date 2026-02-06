@@ -12,7 +12,7 @@ const int MAX_VALUE = 50;
     struct Color
 {
     int red = 0;
-    int green = 0; //All values nitialized 
+    int green = 0; //All values initialized 
     int blue = 0;
 };
 
@@ -28,8 +28,10 @@ int main()
     for (int i = 0; i < n; i++)
     {
         Color tempColor = {rand() % 256, rand() % 256, rand() % 256}; // Random RGB values between 0 and 255
-        colorVector[i] = tempColor; // Assigns current index of vector to tempColor
-        
+        colorVector.push_back(tempColor); // Push struct object into vector
+        cout << " Color " << i + 1 << ": (" << colorVector[i].red << ", " << colorVector[i].green << ", "
+             << colorVector[i].blue << ")" << endl; // Output RGB values of current color
     }
+
     return 0;
 }
