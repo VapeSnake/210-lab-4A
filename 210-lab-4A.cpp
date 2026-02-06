@@ -6,7 +6,8 @@
 
 using namespace std;
 
-int n =
+const int MIN_VALUE = 25;
+const int MAX_VALUE = 50;
 
     struct Color
 {
@@ -18,12 +19,10 @@ int n =
 int main()
 {
     srand(static_cast<unsigned int>(time(nullptr))); // Seeds the random number generator
+    int n = (rand() % (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE; // Random number between MIN_VALUE and MAX_VALUE
+    vector<Color> colorVector(n);
 
-    Color color1 = {200, 300, 400};
-    vector<Color> colorVector;
-    colorVector.push_back(color1);
-    cout << "Color 1 - Red: " << colorVector[0].red
-         << ", Green: " << colorVector[0].green
-         << ", Blue: " << colorVector[0].blue << endl;
+    cout << colorVector.size() << endl; // Output the size of the vector
+    cout << n << endl;
     return 0;
 }
