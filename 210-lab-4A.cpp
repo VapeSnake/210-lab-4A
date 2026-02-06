@@ -5,14 +5,20 @@
 
 using namespace std;
 
-struct Color {
+struct Color
+{
     int red;
     int green;
     int blue;
 };
 
-int main() {
-    Color color1 = {140, 200, 255};
-    cout << "Color 1 - Red: " << color1.red << ", Green: " << color1.green << ", Blue: " << color1.blue << endl;
+int main()
+{
+    Color color1 = {200, 300, 400};
+    vector<Color> colorVector;
+    colorVector.push_back(color1);
+    cout << "Color 1 - Red: " << colorVector[0].red
+         << ", Green: " << colorVector[0].green
+         << ", Blue: " << colorVector[0].blue << endl;
     return 0;
 }
