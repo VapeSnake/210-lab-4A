@@ -9,7 +9,7 @@ using namespace std;
 
 const int MIN_VALUE = 25;
 const int MAX_VALUE = 50;
-const int TABLE_WIDTH = 15;
+const int TABLE_WIDTH = 20;
 
 struct Color
 {
@@ -30,16 +30,15 @@ int main()
     for (int i = 0; i < n; i++)
     {
         Color tempColor = {rand() % 256, rand() % 256, rand() % 256}; // Random RGB values between 0 and 255
-        colorVector[i] = tempColor;   // Initializes current index of vector to temp Color object
-        cout << " Color " << i + 1 << ": (" << colorVector[i].red << ", " << colorVector[i].green << ", "
-             << colorVector[i].blue << ")" << endl; // Output RGB values of current color
+        colorVector[i] = tempColor;                                   // Initializes current index of vector to temp Color object
     }
-    cout << left << setw(TABLE_WIDTH) << "Color #" << setw(TABLE_WIDTH) << "Red" << setw(TABLE_WIDTH) << "Green" << setw(TABLE_WIDTH) << "Blue" << endl;
-    
-    // Table headers
+    cout << left << setw(TABLE_WIDTH) << "Color #" << setw(TABLE_WIDTH) << "Red" << setw(TABLE_WIDTH) << "Green"
+         << setw(TABLE_WIDTH) << "Blue" << endl;
+    cout << left << setw(TABLE_WIDTH) << "------" << setw(TABLE_WIDTH) << "------" << setw(TABLE_WIDTH) << "------"
+         << setw(TABLE_WIDTH) << "------" << endl; // Table headers
     for (int i = 0; i < colorVector.size(); i++)
     {
-        cout << left << setw(TABLE_WIDTH) << i + 1 << setw(TABLE_WIDTH) << colorVector[i].red << setw(TABLE_WIDTH)
+        cout << setw(TABLE_WIDTH) << i + 1 << setw(TABLE_WIDTH) << colorVector[i].red << setw(TABLE_WIDTH)
              << colorVector[i].green << setw(TABLE_WIDTH) << colorVector[i].blue << endl;
     }
     return 0;
