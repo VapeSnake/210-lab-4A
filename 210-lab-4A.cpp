@@ -9,7 +9,7 @@ using namespace std;
 
 const int MIN_VALUE = 25;
 const int MAX_VALUE = 50;
-const int TABLE_WIDTH = 10;
+const int TABLE_WIDTH = 10; // Constant values for easy adjustments to the table formatting
 
 struct Color
 {
