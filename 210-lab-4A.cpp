@@ -1,11 +1,14 @@
+// COMSC-210|210-lab-4A|Noel Mier-Luna
 #include <iostream>
 #include <vector>
 #include <cstdlib>
-#include <ctime>
+#include <ctime> // For random number generation
 
 using namespace std;
 
-struct Color
+int n =
+
+    struct Color
 {
     int red;
     int green;
@@ -14,6 +17,8 @@ struct Color
 
 int main()
 {
+    srand(static_cast<unsigned int>(time(nullptr))); // Seeds the random number generator
+
     Color color1 = {200, 300, 400};
     vector<Color> colorVector;
     colorVector.push_back(color1);
