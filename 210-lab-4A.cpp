@@ -9,7 +9,7 @@ using namespace std;
 
 const int MIN_VALUE = 25;
 const int MAX_VALUE = 50;
-const int TABLE_WIDTH = 20;
+const int TABLE_WIDTH = 10;
 
 struct Color
 {
@@ -25,8 +25,6 @@ int main()
     int n = (rand() % (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE; // Random number between MIN_VALUE and MAX_VALUE
     vector<Color> colorVector(n);
 
-    cout << colorVector.size() << endl; // Output the size of the vector
-    cout << n << endl;
     for (int i = 0; i < n; i++)
     {
         Color tempColor = {rand() % 256, rand() % 256, rand() % 256}; // Random RGB values between 0 and 255
@@ -38,8 +36,8 @@ int main()
          << setw(TABLE_WIDTH) << "------" << endl; // Table headers
     for (int i = 0; i < colorVector.size(); i++)
     {
-        cout << setw(TABLE_WIDTH) << i + 1 << setw(TABLE_WIDTH) << colorVector[i].red << setw(TABLE_WIDTH)
-             << colorVector[i].green << setw(TABLE_WIDTH) << colorVector[i].blue << endl;
+        cout << left << setw(TABLE_WIDTH) << i + 1 << setw(TABLE_WIDTH) << colorVector[i].red << setw(TABLE_WIDTH)
+             << colorVector[i].green << setw(TABLE_WIDTH) << colorVector[i].blue << endl; // Output each color's RGB values in a formatted table
     }
     return 0;
 }
