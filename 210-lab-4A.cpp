@@ -11,18 +11,25 @@ const int MAX_VALUE = 50;
 
     struct Color
 {
-    int red;
-    int green;
-    int blue;
+    int red = 0;
+    int green = 0; //All values nitialized 
+    int blue = 0;
 };
 
 int main()
 {
     srand(static_cast<unsigned int>(time(nullptr))); // Seeds the random number generator
+    Color color1 = {255, 0, 0};
     int n = (rand() % (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE; // Random number between MIN_VALUE and MAX_VALUE
     vector<Color> colorVector(n);
 
     cout << colorVector.size() << endl; // Output the size of the vector
     cout << n << endl;
+    for (int i = 0; i < n; i++)
+    {
+        Color tempColor = {rand() % 256, rand() % 256, rand() % 256}; // Random RGB values between 0 and 255
+        colorVector[i] = tempColor; // Assigns current index of vector to tempColor
+        
+    }
     return 0;
 }
